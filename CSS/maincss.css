@@ -1,0 +1,139 @@
+@import url(./generalcss.css);
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-color);
+}
+
+body>.container {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 80px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 5px 5px 1px #c2daff;
+    background-color: var(--sidebar-color);
+    transition: all 0.6s ease;
+}
+
+
+
+.sidebar .header .img {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 10%;
+    background-color: var(--wire-frame-each-color);
+    transition: all 0.6s ease;
+}
+
+.sidebar.show .header .img {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 20%;
+    background-color: var(--wire-frame-each-color);
+}
+
+.sidebar .header .shrow {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sidebar .header .shrow .brand .name,.sidebar .header .shrow .brand .slogan{
+
+    color: var(--secondary-color);
+}
+
+.sidebar .header .shrow .brand {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+.sidebar.show .header .shrow .brand {
+    width: 180px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 20%;
+    opacity: 100;
+    animation: fadeIn 4s;
+}
+
+
+.sidebar .header .toggle {
+    position: absolute;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -25px;
+    border-radius: 50%;
+    background-color: var(--sidebar-color);
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.6s ease;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.sidebar::after {
+    content: '';
+    background-color: var(--body-color);
+    width: 30px;
+    height: 35px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: -20px;
+    z-index: 0;
+}
+
+.sidebar.show {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    border-radius: 0%;
+    background-color: var(--sidebar-color);
+}
+
+.sidebar.show .header .toggle {
+    transform: rotate(180deg);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* @keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+} */

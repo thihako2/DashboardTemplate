@@ -1,0 +1,17 @@
+@import url(./root.css);
+.bcolorbc{
+    background-color: var(--body-color);
+}
+
+.flxc{
+    display: flex;
+    flex-direction: column;
+}
+
+.jcc{
+    justify-content: center;
+}
+
+.aic{
+    align-items: center;
+}
