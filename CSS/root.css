@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Oxygen:wght@300;400;700&family=Trykker&display=swap');
 :root{
     --body-color: #caddfa;
     --sidebar-color: #FFF;
     --main-color: #B9848C;
     --second-color: #806491;
     --text-color: #022647;
-    --text-second-color: #707070;
+    --text-second-color: #929292;
 
     --wire-frame-each-color: #696969;
 }
